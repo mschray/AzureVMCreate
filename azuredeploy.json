@@ -49,32 +49,24 @@
         "description": "Public IP Address Name"
       }
     },
+     "imageSKU": { 
+       "type": "string", 
+       "defaultValue": "14.04.2-LTS", 
+       "allowedValues": [ 
+         "12.04.5-LTS", 
+         "14.04.2-LTS", 
+         "15.04" 
+       ], 
+       "metadata": { 
+         "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.2-LTS, 15.04." 
+       } 
+     } 
+   }, 
     "vnetName": {
       "type": "string",
       "defaultValue": "myVNET",
       "metadata": {
         "description": "VNET name"
-      }
-    },
-    "imagePublisher": {
-      "type": "string",
-      "defaultValue": "MicrosoftWindowsServer",
-      "metadata": {
-        "description": "Image Publisher"
-      }
-    },
-    "imageOffer": {
-      "type": "string",
-      "defaultValue": "WindowsServer",
-      "metadata": {
-        "description": "Image Offer"
-      }
-    },
-    "imageSKU": {
-      "type": "string",
-      "defaultValue": "2012-R2-Datacenter",
-      "metadata": {
-        "description": "Image SKU"
       }
     },
     "vmSize": {
@@ -93,6 +85,8 @@
     }
   },
   "variables": {
+    "imagePublisher": "Canonical", 
+    "imageOffer": "UbuntuServer", 
     "storageAccountType": "Standard_LRS",
     "vmStorageAccountContainerName": "vhds",
     "availabilitySetName": "myAvSet",
