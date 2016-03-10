@@ -266,7 +266,7 @@
         "storageProfile": {
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
-            "offer": "[parameters('imageOffer')]",
+            "offer": "[variables('imageOffer')]",
             "sku": "[parameters('imageSKU')]",
             "version": "latest"
           },
