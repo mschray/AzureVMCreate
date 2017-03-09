@@ -44,7 +44,7 @@
     },
     "publicIPAddressName": {
       "type": "string",
-,      "defaultValue": "myPublicIP",
+      "defaultValue": "myPublicIP",
       "metadata": {
         "description": "Public IP Address Name"
       }
